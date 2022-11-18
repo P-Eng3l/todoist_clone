@@ -1,0 +1,547 @@
+* {
+  /* font-family: 'roboto', serif; */
+  font-family: 'Roboto', sans-serif;
+  color: White;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 300;
+}
+
+html,
+body {
+  /* To get rid of the white space around my website */
+  margin: 0;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.main_container {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: black;
+
+  margin: none;
+  padding: none;
+}
+
+li {
+  color: black;
+  list-style: none;
+  text-align: left;
+
+}
+
+/* Grid Model; oriented from: https://www.w3schools.com/css/css_grid.asp */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+      'header header'
+      'menu main';
+  background-color: white;
+}
+
+.grid-container>div {
+  text-align: center;
+  padding: 5px;
+}
+
+.header {
+  grid-area: header;
+
+  background-color: #dc4c3e;
+  height: 30px;
+
+  padding: 5px;
+}
+
+.menue {
+  grid-area: menu;
+  width: max(300px);
+  height: calc(100vh - 30px);
+  padding-top: 30px; 
+  padding-left: 5px; 
+  padding-right: 5px; 
+  padding-bottom: 5px;
+
+  background-color: #FAFAFA;
+  /* background-color: #fefbf2; */
+  color: #000000;
+
+}
+
+.main {
+  grid-area: main;
+  min-width: 200px;
+  min-height: 100vh;
+
+  padding: 5px;
+}
+
+/* Classes specific for header */
+.icon_header {
+  filter: invert(100%);
+
+  width: 28px;
+  height: 28px;
+
+  position: relative;
+  top: calc((30px - 28px) / 2);
+
+  /* margin-left: -10px; */
+}
+
+#icon1 {
+  float: left;
+  left: 40px;
+}
+
+#icon2 {
+  float: left;
+  left: 60px;
+
+  width: 24px;
+  height: 24px;
+
+  top: calc((30px - 24px) / 2);
+}
+
+#icon3 {
+  float: right;
+  right: 60px;
+}
+
+#score_todo {
+  float: right;
+  margin: none;
+
+  height: 30px;
+}
+
+#score_todo_P {
+  margin: 0;
+  margin-top: 8px;
+}
+
+.search {
+  top: calc((30px - 28px) / 2);
+
+  float: left;
+  left: 30px;
+  position: relative;
+
+  /* For the icon */
+  height: 24px;
+  padding-left: 34px;
+
+
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+
+  border: none;
+  border-radius: 5px;
+
+}
+
+.search::placeholder {
+  color: white;
+}
+
+/* Classes specific for Menu */
+.button_div {
+
+  height: 34px;
+  width: calc(300px - 40px);
+
+  float: right;
+}
+
+.icon_menue {
+  width: 24px;
+  height: 24px;
+
+  position: relative;
+  float: left;
+  top: 5px;
+}
+
+#icon_toggle {
+  width: 24px;
+  height: 24px;
+}
+
+.main_icon_toggle {
+  position: relative;
+  float: left;
+  top: 5px;
+}
+
+.small_icon_toggle {
+  position: relative;
+  float: left;
+}
+
+.button_main_menue {
+  color: #000000;
+
+  position: relative;
+  float: left;
+  left: 6px;
+  top: 9px;
+}
+
+.button_main_toggle {
+  color: #000000;
+
+  position: relative;
+  float: left;
+  left: 6px;
+  top: 9px;
+}
+
+.counter_menue {
+  /* color: #fefbf2; */
+  color: #7e7d79;
+
+  position: relative;
+  float: left;
+  left: 15px;
+  top: 9px;
+}
+
+.counter_menue_2 {
+  /* color: #fefbf2; */
+  color: #7e7d79;
+  padding-left: 10px;
+}
+
+.hr_right {
+  float: right;
+  width: calc(300px - 40px);
+  color: grey;
+  opacity: 50%;
+}
+
+.list_div {
+
+  height: 34px;
+  width: calc(300px - 40px);
+
+  float: right;
+}
+
+.list_div_small {
+
+  height: 34px;
+  width: calc(300px - 40px - 40px);
+
+  float: right;
+}
+
+.list_menue {
+  color: black;
+  /* width: calc(300px - 90px); */
+  padding: 0;
+
+  margin-top: 9px;
+  margin-bottom: auto;
+}
+
+.list_small {
+  color: black;
+  width: calc(300px - 40px - 40px);
+  padding: 0;
+
+  margin-top: 9px;
+  margin-bottom: auto;
+}
+
+.icon_list {
+  position: relative;
+  float: left;
+
+  margin-right: 5px;
+}
+
+#radio_list {
+  width: 10px;
+  height: 10px;
+
+  top: 4px;
+}
+
+#arrow_list1 {
+  width: 20px;
+  height: 20px;
+}
+
+#arrow_list2 {
+  width: 20px;
+  height: 20px;
+}
+
+#person_list {
+  width: 15px;
+  height: 15px;
+}
+
+#blue_icon {
+  /* Taken from: https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(73%) sepia(64%) saturate(5203%) hue-rotate(198deg) brightness(93%) contrast(87%);
+}
+
+#green_icon {
+  /* Taken from: https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(58%) sepia(22%) saturate(735%) hue-rotate(75deg) brightness(93%) contrast(94%);
+}
+
+#violet_icon {
+  /* Taken from: https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(64%) sepia(61%) saturate(4272%) hue-rotate(222deg) brightness(80%) contrast(98%);
+}
+
+.light_blue_icon {
+  /* Taken from: https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(79%) sepia(10%) saturate(1186%) hue-rotate(176deg) brightness(98%) contrast(85%);
+}
+
+.red_icon {
+  /* Taken from: https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(31%) sepia(27%) saturate(5430%) hue-rotate(346deg) brightness(92%) contrast(71%);
+}
+
+.green_icon {
+  /* Taken from: https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(53%) sepia(21%) saturate(1155%) hue-rotate(67deg) brightness(89%) contrast(82%);
+}
+
+.yellow_icon {
+  /* Taken from: https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(86%) sepia(90%) saturate(778%) hue-rotate(322deg) brightness(104%) contrast(91%);
+}
+
+.grey_icon {
+  /* Taken from: https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(96%) sepia(0%) saturate(886%) hue-rotate(164deg) brightness(82%) contrast(75%);
+}
+
+.red2_icon {
+  /* Taken from: https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(32%) sepia(90%) saturate(926%) hue-rotate(333deg) brightness(103%) contrast(85%);
+}
+
+/* Classes for Main */
+.heading {
+  width: calc(1073px - 55px - 55px);
+  font-size: 20px;
+  font-weight: 400;
+
+  color: black;
+
+  text-align: left;
+
+  padding-top: 36px;
+  padding-left: 55px;
+  padding-right: 55px;
+  margin: 0;
+}
+
+.ul_main {
+  padding-top: 20px;
+  padding-left: 55px;
+  margin: 0;
+}
+
+.div_list_main {
+  width: calc(1073px - 55px - 55px - 80px);
+  border-bottom: 1px solid #F4F4F4;
+
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+/* span.list_elem_text2:hover{
+  font-weight: 400;
+} */
+
+input[type="radio"] {
+  width: 18px;
+  height: 18px;
+
+}
+
+.list_elem_text {
+  color: black;
+
+  position: relative;
+  padding-left: 5px;
+  top: -2px;
+}
+
+.add_task {
+  width: calc(1073px - 55px - 55px - 80px);
+  height: 20px;
+
+  margin-left: 55px;
+}
+
+.add_task_text {
+  color: black;
+
+  position: relative;
+  float: left;
+  text-align: left;
+  padding-left: 8px;
+  top: -2px;
+  margin-top: 3px;
+
+  border: none;
+  opacity: "50%";
+}
+
+.change_task_text {
+  color: black;
+
+  position: relative;
+  /* float: left;
+  text-align: left; */
+  padding-left: 8px;
+  top:0px;
+  margin-top: 3px;
+
+  border: none;
+  /* opacity: "50%"; */
+}
+
+.icon_add_task {
+  width: 24px;
+  height: 24px;
+
+  position: relative;
+  float: left;
+  top: -3px;
+}
+
+.main_button {
+  width: 20px;
+  height: 20px;
+
+}
+
+.icon_main_menue {
+  width: 20px;
+  height: 20px;
+
+  position: relative;
+  float: left;
+
+  top: 3px;
+
+  /* Taken from: https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(54%) sepia(2%) saturate(14%) hue-rotate(349deg) brightness(92%) contrast(89%);
+}
+
+.list_elem_text2 {
+  color: black;
+
+  position: relative;
+  padding-left: 5px;
+  top: -2px;
+
+}
+
+.list_elem_text3 {
+  color: black;
+
+  position: relative;
+  /* padding-left: 5px;
+  top: -2px; */
+
+}
+
+.hide {
+  display: none;
+}
+
+.search_text {
+  margin-top: 10px;
+  color: grey;
+
+  padding-left: 55px;
+  padding-right: 55px;
+
+  visibility: hidden;
+
+  font-style: italic;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Use for Div to make background transparent */
+.transparent {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Various margin variations */
+.margin_left_X {
+  margin-left: 5%;
+}
+
+.margin_right_X {
+  margin-left: 5%;
+}
+
+.margin_top_X {
+  margin-left: 5%;
+}
+
+.margin_bottom_X {
+  margin-left: 5%;
+}
+
+/* Various align variations */
+/* Float places element left, right, or center of its container */
+.float_left {
+  float: left;
+}
+
+.float_right {
+  float: right;
+}
+
+.float_center {
+  float: center;
+}
+
+/* Text align is usedto specify the horizontal alignment of text in an element */
+.text_align_center {
+  text-align: center;
+}
+
+.text_align_left {
+  text-align: left;
+}
+
+.text_align_right {
+  text-align: right;
+}
+
+/* Various other classes */
+.justify {
+  /* Blocksatz element for txt */
+  text-align: justify;
+}
+
+.border {
+  border: 1px solid red;
+}
+
+.color_all {
+  color: red;
+}
